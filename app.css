@@ -6,11 +6,11 @@ body {
 }
 
 .container {
-    position: absolute;
-    left: 40%;
-    top: 40%;
+    height: 90vh;
+    width: 100vw;
     display: flex;
     gap: 1em;
+    justify-content: center;
     align-items: center;
 }
 
