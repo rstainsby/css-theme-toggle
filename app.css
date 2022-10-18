@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--cl-bg);
+    color: var(--cl-fg);
+}
+
+.container {
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.icon {
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.icon:active {
+    transform: translateY(4%);
+}
+
+.color-slider {
+    stroke: none;
+    fill: var(--cl-fg);
+}
+

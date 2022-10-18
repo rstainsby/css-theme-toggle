@@ -1,0 +1,39 @@
+.light-theme-1 {
+    --cl-fg: teal;
+    --cl-bg: #e6fefd;
+}
+
+.light-theme-2 {
+    --cl-fg: #e6fefd;
+    --cl-bg: teal;
+}
+
+.light-theme-3 {
+    --cl-fg: black;
+    --cl-bg: #cb46f6;
+}
+
+.light-theme-4 {
+    --cl-fg: #3c3149;
+    --cl-bg: violet;
+}
+
+.dark-theme-1 {
+    --cl-fg: #2eb0a5;
+    --cl-bg: black;
+}
+
+.dark-theme-2 {
+    --cl-fg: #cb46f6;
+    --cl-bg: black;
+}
+
+.dark-theme-3 {
+    --cl-fg: violet;
+    --cl-bg: #3c3149;
+}
+
+.dark-theme-4 {
+    --cl-fg: hotpink;
+    --cl-bg: #1f1a24;
+}
