@@ -5,6 +5,13 @@ const themeSelector = document.getElementById('theme-selector');
 const colorSlider = document.getElementById('color-slider');
 const body = document.body;
 
+const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (prefersDarkMode) {
+    body.classList.replace('light', 'dark');  
+    themeSelector.classList.replace(SUN_ICON, MOON_ICON);  
+}
+
 themeSelector.onclick = () => {
     if (themeSelector.classList.contains(SUN_ICON)) {
         body.classList.replace('light', 'dark');  
@@ -22,6 +29,14 @@ colorSlider.oninput = () => {
     if (currentTheme) {
         body.classList.replace(currentTheme, 'theme-' + colorSlider.value);
     }
+}
+
+const applyLightTheme = () => {
+
+}
+
+const applyDarkTheme = () => {
+    
 }
 
 const applyTheme = (theme) => {
