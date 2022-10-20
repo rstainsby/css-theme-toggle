@@ -7,6 +7,16 @@ const body = document.body;
 
 const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
+const applyLightTheme = () => {
+    body.classList.replace('light', 'dark');  
+    themeSelector.classList.replace(SUN_ICON, MOON_ICON);   
+}
+
+const applyDarkTheme = () => {
+    body.classList.replace('dark', 'light');  
+    themeSelector.classList.replace(MOON_ICON, SUN_ICON);
+}
+
 if (prefersDarkMode) {
     applyDarkTheme();
 }
@@ -18,16 +28,6 @@ themeSelector.onclick = () => {
         applyDarkTheme();
     }
 };
-
-const applyLightTheme = () => {
-    body.classList.replace('light', 'dark');  
-    themeSelector.classList.replace(SUN_ICON, MOON_ICON);   
-}
-
-const applyDarkTheme = () => {
-    body.classList.replace('dark', 'light');  
-    themeSelector.classList.replace(MOON_ICON, SUN_ICON);
-}
 
 colorSlider.oninput = () => {
     let currentClasses = body.classList.value.split(' ');
