@@ -1,39 +1,47 @@
-.light-theme-1 {
-    --cl-fg: teal;
-    --cl-bg: #e6fefd;
+.light {
+    --theme-1-primary: teal;
+    --theme-1-secondary: #e6fefd;
+
+    --theme-2-primary: #e6fefd;;
+    --theme-2-secondary: teal;
+
+    --theme-3-primary: black;
+    --theme-3-secondary: #cb46f6;
+
+    --theme-4-primary: #3c3149;
+    --theme-4-secondary: violet;
 }
 
-.light-theme-2 {
-    --cl-fg: #e6fefd;
-    --cl-bg: teal;
+.dark {
+    --theme-1-primary: #2eb0a5;
+    --theme-1-secondary: black;
+
+    --theme-2-primary: #cb46f6;;
+    --theme-2-secondary: black;
+
+    --theme-3-primary: violet;
+    --theme-3-secondary: #3c3149;
+
+    --theme-4-primary: hotpink;
+    --theme-4-secondary: #1f1a24;
 }
 
-.light-theme-3 {
-    --cl-fg: black;
-    --cl-bg: #cb46f6;
+.theme-1 {
+    --cl-fg: var(--theme-1-primary);
+    --cl-bg: var(--theme-1-secondary);
 }
 
-.light-theme-4 {
-    --cl-fg: #3c3149;
-    --cl-bg: violet;
+.theme-2 {
+    --cl-fg: var(--theme-2-primary);
+    --cl-bg: var(--theme-2-secondary);
 }
 
-.dark-theme-1 {
-    --cl-fg: #2eb0a5;
-    --cl-bg: black;
+.theme-3 {
+    --cl-fg: var(--theme-3-primary);
+    --cl-bg: var(--theme-3-secondary);
 }
 
-.dark-theme-2 {
-    --cl-fg: #cb46f6;
-    --cl-bg: black;
-}
-
-.dark-theme-3 {
-    --cl-fg: violet;
-    --cl-bg: #3c3149;
-}
-
-.dark-theme-4 {
-    --cl-fg: hotpink;
-    --cl-bg: #1f1a24;
+.theme-4 {
+    --cl-fg: var(--theme-4-primary);
+    --cl-bg: var(--theme-4-secondary);
 }
