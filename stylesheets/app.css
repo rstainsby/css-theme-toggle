@@ -1,4 +1,8 @@
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
     padding: 0;
     background: var(--cl-bg);
@@ -6,10 +10,9 @@ body {
 }
 
 .container {
-    height: 100vh;
-    width: 100vw;
+    width: 80%;
     display: flex;
-    gap: 1em;
+    gap: 2em;
     justify-content: center;
     align-items: center;
 }
