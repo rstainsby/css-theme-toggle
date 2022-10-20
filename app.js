@@ -2,17 +2,27 @@ const SUN_ICON = 'fa-sun';
 const MOON_ICON = 'fa-moon';
 
 const themeSelector = document.getElementById('theme-selector');
+const colorSlider = document.getElementById('color-slider');
 const body = document.body;
 
 themeSelector.onclick = () => {
     if (themeSelector.classList.contains(SUN_ICON)) {
-        themeSelector.classList.replace(SUN_ICON, MOON_ICON);
-        applyTheme("dark");        
+        body.classList.replace('light', 'dark');  
+        themeSelector.classList.replace(SUN_ICON, MOON_ICON);   
     } else {
+        body.classList.replace('dark', 'light');  
         themeSelector.classList.replace(MOON_ICON, SUN_ICON);
-        applyTheme('light');
     }
 };
+
+colorSlider.oninput = () => {
+    let currentClasses = body.classList.value.split(' ');
+    let currentTheme = currentClasses.filter(cls => cls.toLowerCase().includes('theme-'));
+
+    if (currentTheme) {
+        body.classList.replace(currentTheme, 'theme-' + colorSlider.value);
+    }
+}
 
 const applyTheme = (theme) => {
     let classes = body.classList.value.split(' ');
