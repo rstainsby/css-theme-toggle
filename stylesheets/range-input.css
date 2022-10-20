@@ -35,13 +35,13 @@ input[type="range"] {
   --thumb-border: 4px solid var(--cl-fg);
   --thumb-border-radius: 50%;
   --thumb-background: var(--cl-bg);
-  --thumb-box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+  --thumb-box-shadow: 0 0 0 2px var(--cl-bg); /* Add cool effects to your sliders! */
 
   /* track variables */
   --track-width: 100%;
   --track-height: 8.4px;
   --track-cursor: pointer;
-  --track-box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  --track-box-shadow: inset 1px 1px 0px rgba(0, 0, 0, 0.3);
   --track-background: var(--cl-fg);
   --track-background-focus: var(--cl-fg);
   --track-border-radius: 10px;
