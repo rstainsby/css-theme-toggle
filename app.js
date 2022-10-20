@@ -8,19 +8,26 @@ const body = document.body;
 const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 if (prefersDarkMode) {
-    body.classList.replace('light', 'dark');  
-    themeSelector.classList.replace(SUN_ICON, MOON_ICON);  
+    applyDarkTheme();
 }
 
 themeSelector.onclick = () => {
     if (themeSelector.classList.contains(SUN_ICON)) {
-        body.classList.replace('light', 'dark');  
-        themeSelector.classList.replace(SUN_ICON, MOON_ICON);   
+        applyLightTheme();
     } else {
-        body.classList.replace('dark', 'light');  
-        themeSelector.classList.replace(MOON_ICON, SUN_ICON);
+        applyDarkTheme();
     }
 };
+
+const applyLightTheme = () => {
+    body.classList.replace('light', 'dark');  
+    themeSelector.classList.replace(SUN_ICON, MOON_ICON);   
+}
+
+const applyDarkTheme = () => {
+    body.classList.replace('dark', 'light');  
+    themeSelector.classList.replace(MOON_ICON, SUN_ICON);
+}
 
 colorSlider.oninput = () => {
     let currentClasses = body.classList.value.split(' ');
@@ -30,23 +37,3 @@ colorSlider.oninput = () => {
         body.classList.replace(currentTheme, 'theme-' + colorSlider.value);
     }
 }
-
-const applyLightTheme = () => {
-
-}
-
-const applyDarkTheme = () => {
-    
-}
-
-const applyTheme = (theme) => {
-    let classes = body.classList.value.split(' ');
-    let currentThemeClass = classes.filter(cls => cls.toLowerCase().includes('-theme-'));
-
-    if (currentThemeClass) {
-        let currentColourSchemeNumber = currentThemeClass[0].charAt(currentThemeClass[0].length - 1);
-        let newThemeClass = `${theme}-theme-${currentColourSchemeNumber}`;
-
-        body.classList.replace(currentThemeClass, newThemeClass);
-    }    
-};
