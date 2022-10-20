@@ -1,0 +1,140 @@
+/* remove all preset browser styles */
+input[type="range"] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* 
+    apply custom styles 
+*/
+
+input[type="range"] {
+  /* thumb variables*/
+  --thumb-cursor: pointer;
+  --thumb-height: 24px;
+  --thumb-width: 24px;
+  --thumb-border: 4px solid var(--cl-fg);
+  --thumb-border-radius: 50%;
+  --thumb-background: var(--cl-bg);
+  --thumb-box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+
+  /* track variables */
+  --track-width: 100%;
+  --track-height: 8.4px;
+  --track-cursor: pointer;
+  --track-box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  --track-background: var(--cl-fg);
+  --track-background-focus: var(--cl-fg);
+  --track-border-radius: 10px;
+  --track-border: 0.2px solid #010101;
+}
+
+/* Special styling for WebKit/Blink */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  height: var(--thumb-height);
+  width: var(--thumb-width);
+  border: var(--thumb-border);
+  border-radius: var(--thumb-border-radius);
+  background: var(--thumb-background);
+  cursor: var(--thumb-cursor);
+  box-shadow: var(--thumb-box-shadow);
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: var(--track-height);
+  width: var(--track-width);
+  cursor: var(--track-cursor);
+  box-shadow: var(--track-box-shadow);
+  background: var(--track-background);
+  border-radius: var(--track-border-radius);
+  border: var(--track-border-radius);
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: var(--track-background-focus);
+}
+
+/* All the same stuff for Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: var(--thumb-height);
+  width: var(--thumb-width);
+  border: var(--thumb-border);
+  border-radius: var(--thumb-border-radius);
+  background: var(--thumb-background);
+  cursor: var(--thumb-cursor);
+  box-shadow: var(--thumb-box-shadow);
+}
+
+input[type="range"]::-moz-range-track {
+  height: var(--track-height);
+  width: var(--track-width);
+  cursor: var(--track-cursor);
+  box-shadow: var(--track-box-shadow);
+  background: var(--track-background);
+  border-radius: var(--track-border-radius);
+  border: var(--track-border-radius);
+}
+
+/* All the same stuff for IE */
+input[type="range"]::-ms-thumb {
+  height: var(--thumb-height);
+  width: var(--thumb-width);
+  border: var(--thumb-border);
+  border-radius: var(--thumb-border-radius);
+  background: var(--thumb-background);
+  cursor: var(--thumb-cursor);
+  box-shadow: var(--thumb-box-shadow);
+}
+
+input[type="range"]::-ms-track {
+  height: var(--track-height);
+  width: var(--track-width);
+  cursor: var(--track-cursor);
+  box-shadow: var(--track-box-shadow);
+  background: var(--track-background);
+  border-radius: var(--track-border-radius);
+  border: var(--track-border-radius);
+}
+
+input[type="range"]::-ms-fill-lower {
+  box-shadow: var(--track-box-shadow);
+  background: var(--track-background);
+  border-radius: var(--track-border-radius);
+  border: var(--track-border-radius);
+}
+
+input[type="range"]:focus::-ms-fill-lower {
+  background: var(--track-background-focus);
+}
+
+input[type="range"]::-ms-fill-upper {
+  box-shadow: var(--track-box-shadow);
+  background: var(--track-background);
+  border-radius: var(--track-border-radius);
+  border: var(--track-border-radius);
+}
+
+input[type="range"]:focus::-ms-fill-upper {
+  background: var(--track-background-focus);
+}

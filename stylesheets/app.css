@@ -24,6 +24,7 @@ body {
 }
 
 .color-slider {
+    max-width: 12.5em;
     stroke: none;
     fill: var(--cl-fg);
 }
